@@ -8,16 +8,13 @@ const nodemailer = require('nodemailer');
 
 const transporter = nodemailer.createTransport({
   host: 'smtp.gmail.com',
-  port: 587,
-  secure: false,
+  port: 465,
+  secure: true,
   auth: {
     user: process.env.GMAIL_USER,
     pass: process.env.GMAIL_PASS
-  },
-  tls: {
-    rejectUnauthorized: false
   }
-})
+});
 
 const generateOTP = () => Math.floor(100000 + Math.random() * 900000).toString();
 
