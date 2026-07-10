@@ -35,9 +35,7 @@ app.use(cors({
   origin: function(origin, callback) {
     const allowedOrigins = [
       "http://localhost:5173",
-      "http://localhost:3000",
-      "https://devmind-ai.vercel.app",
-      "https://devmind.vercel.app",
+      "https://dev-mind-ai-jade.vercel.app"
     ]
     if (!origin || allowedOrigins.includes(origin)) {
       callback(null, true)
