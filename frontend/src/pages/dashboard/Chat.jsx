@@ -94,16 +94,15 @@ export const Chat = () => {
   const [message, setMessage] = useState('');
   const textareaRef = useRef(null);
   const messagesEndRef = useRef(null);
+  const messagesTopRef = useRef(null);
   
   const { createChat, sendMessage, activeChat, sending, error, loading } = useChatStore();
 
-  const scrollToBottom = () => {
-    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
-  };
-
   useEffect(() => {
-    scrollToBottom();
-  }, [activeChat?.messages, sending]);
+    if (activeChat?.messages?.length > 0) {
+      messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+    }
+  }, [activeChat?.messages]);
 
   useEffect(() => {
     if (textareaRef.current) {
@@ -118,6 +117,8 @@ export const Chat = () => {
 
     const currentMsg = message;
     setMessage('');
+    
+    messagesTopRef.current?.scrollIntoView({ behavior: 'smooth' });
     
     if (activeChat) {
       await sendMessage(activeChat._id, { message: currentMsg, conversationType: "chat" });
@@ -178,6 +179,7 @@ export const Chat = () => {
           </div>
         ) : (
           <div className="max-w-4xl mx-auto flex flex-col gap-6">
+            <div ref={messagesTopRef} />
             {activeChat.messages.map((msg, index) => {
               const isUser = msg.role === 'user';
               return (
