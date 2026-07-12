@@ -10,7 +10,7 @@
 > debug, write, and review code — built for developers 
 > who want to code smarter and ship faster.
 
-🌐 **Live Demo:** [devmind-ai.vercel.app]([https://devmind-ai.vercel.app](https://dev-mind-g46052c1l-muhammad-ammads-projects.vercel.app/)
+🌐 **Live Demo:** [devmind-ai.vercel.app](https://dev-mind-g46052c1l-muhammad-ammads-projects.vercel.app/)
 
 ---
 
