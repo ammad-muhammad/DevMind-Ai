@@ -60,51 +60,28 @@ const register = async (req, res) => {
       username,
       email,
       password: hashedPassword,
-      isVerified: false,
+      isVerified: true,
       otp,
       otpExpiry
     });
 
     await user.save();
 
-    transporter.sendMail({
-      from: `"DevMind AI" <${process.env.GMAIL_USER}>`,
-      to: email,
-      subject: 'Your DevMind AI Verification Code',
-      html: `
-        <div style="font-family: Arial, sans-serif;
-        max-width: 500px; margin: 0 auto;
-        background: #0a0a0a; color: #ffffff;
-        padding: 40px; border-radius: 12px;">
-          <h1 style="color: #7c3aed;">DevMind AI</h1>
-          <p style="color: #9ca3af;">
-            Your intelligent coding partner
-          </p>
-          <h2>Verify your email</h2>
-          <p style="color: #d1d5db;">
-            Your verification code:
-          </p>
-          <div style="background: #1f1f1f; 
-          border: 2px solid #7c3aed;
-          border-radius: 12px; padding: 24px; 
-          text-align: center; margin: 24px 0;">
-            <h1 style="color: #a78bfa; font-size: 42px;
-            letter-spacing: 12px; margin: 0;">
-              ${otp}
-            </h1>
-          </div>
-          <p style="color: #6b7280; font-size: 14px;">
-            Expires in 10 minutes. 
-            If you did not request this, ignore this email.
-          </p>
-        </div>
-      `
-    }).catch(err => console.error('Email send error:', err));
+    const token = jwt.sign(
+      { userId: user._id },
+      process.env.JWT_SECRET,
+      { expiresIn: "24h" }
+    );
 
-    res.status(200).json({
-      message: "OTP sent to your email",
-      email: email,
-      requiresVerification: true
+    return res.status(201).json({
+      message: "Registration successful",
+      token,
+      user: { 
+        id: user._id, 
+        username: user.username, 
+        email: user.email, 
+        avatar: user.avatar 
+      }
     });
   } catch (error) {
     console.error('Register error:', error);
