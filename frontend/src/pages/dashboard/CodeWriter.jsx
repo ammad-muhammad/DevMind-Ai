@@ -99,30 +99,7 @@ export const CodeWriter = () => {
           </div>
           
           <div className="bg-[#111111] border border-[#1f1f1f] rounded-2xl p-6 shadow-sm focus-within:border-[#16a34a]/50 focus-within:ring-1 focus-within:ring-[#16a34a]/50 transition-all">
-            <div className="relative mb-4 w-fit">
-              <button
-                type="button"
-                onClick={() => setLangOpen(!langOpen)}
-                className="flex items-center gap-2 px-3 py-1.5 text-xs font-medium bg-[#1a1a1a] border border-[#2a2a2a] rounded-lg text-gray-400 hover:text-white transition-colors"
-              >
-                {language}
-                {langOpen ? <ChevronUp size={14} /> : <ChevronDown size={14} />}
-              </button>
-              
-              {langOpen && (
-                <div className="absolute top-full mt-2 left-0 w-40 bg-[#1a1a1a] border border-[#2a2a2a] rounded-xl shadow-2xl overflow-hidden z-20">
-                  {LANGUAGES.map(l => (
-                    <button
-                      key={l.id}
-                      onClick={() => { setLanguage(l.name); setLangOpen(false); }}
-                      className="w-full text-left px-4 py-2.5 text-sm text-gray-300 hover:bg-[#16a34a] hover:text-white transition-colors"
-                    >
-                      {l.name}
-                    </button>
-                  ))}
-                </div>
-              )}
-            </div>
+
 
             <textarea
               value={prompt}
