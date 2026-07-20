@@ -85,12 +85,12 @@ export const Explainer = () => {
       <div className="flex-1 flex flex-col lg:flex-row overflow-y-auto lg:overflow-hidden">
         {/* Left Panel: Input */}
         <div className="lg:flex-1 border-b lg:border-b-0 lg:border-r border-[#1f1f1f] flex flex-col bg-[#0a0a0a]">
-          <div className="p-4 lg:p-6 shrink-0 border-b border-[#1f1f1f]">
-            <h1 className="text-xl lg:text-2xl font-bold text-white mb-1">📖 Code Explainer</h1>
+          <div className="p-4 shrink-0 border-b border-[#1f1f1f]">
+            <h1 className="text-xl font-bold text-white mb-1">📖 Code Explainer</h1>
             <p className="text-gray-400 text-sm">Paste code to understand it instantly.</p>
           </div>
           
-          <div className="flex flex-col p-4 lg:p-6 lg:flex-1 lg:overflow-hidden gap-4">
+          <div className="flex flex-col p-4 lg:flex-1 lg:overflow-hidden gap-4">
             <div className="relative w-fit">
               <button
                 type="button"
@@ -120,7 +120,7 @@ export const Explainer = () => {
               value={code}
               onChange={(e) => setCode(e.target.value)}
               placeholder="Paste your code here..."
-              className="w-full min-h-[220px] lg:flex-1 bg-[#111111] border border-[#1f1f1f] rounded-xl p-4 font-mono text-sm text-gray-300 placeholder-gray-600 focus:outline-none focus:border-[#2563eb]/50 focus:ring-1 focus:ring-[#2563eb]/50 resize-none transition-colors"
+              className="w-full min-h-[160px] lg:flex-1 bg-[#111111] border border-[#1f1f1f] rounded-xl p-4 font-mono text-sm text-gray-300 placeholder-gray-600 focus:outline-none focus:border-[#2563eb]/50 focus:ring-1 focus:ring-[#2563eb]/50 resize-none transition-colors"
             />
             
             {error && (
@@ -134,7 +134,7 @@ export const Explainer = () => {
               <button
                 onClick={handleExplain}
                 disabled={!code.trim() || sending}
-                className="flex-1 bg-[#2563eb] hover:bg-[#1d4ed8] disabled:bg-[#1a1a1a] disabled:text-gray-600 text-white py-3 px-6 rounded-xl font-medium transition-colors flex items-center justify-center gap-2 shadow-lg shadow-[#2563eb]/20 disabled:shadow-none"
+                className="flex-1 bg-[#2563eb] hover:bg-[#1d4ed8] disabled:bg-[#1a1a1a] disabled:text-gray-600 text-white py-2.5 px-6 rounded-xl font-medium transition-colors flex items-center justify-center gap-2 shadow-lg shadow-[#2563eb]/20 disabled:shadow-none"
               >
                 {sending ? (
                   <><Loader2 className="animate-spin" size={18} /> Explaining...</>
@@ -145,7 +145,7 @@ export const Explainer = () => {
               <button
                 onClick={() => setCode('')}
                 disabled={sending}
-                className="px-6 py-3 border border-[#1f1f1f] text-gray-400 hover:text-white hover:bg-[#111111] rounded-xl font-medium transition-colors disabled:opacity-50"
+                className="px-6 py-2.5 border border-[#1f1f1f] text-gray-400 hover:text-white hover:bg-[#111111] rounded-xl font-medium transition-colors disabled:opacity-50"
               >
                 Clear
               </button>
@@ -155,7 +155,7 @@ export const Explainer = () => {
 
         {/* Right Panel: Output */}
         <div className="lg:flex-1 flex flex-col bg-[#0d0d0d] lg:overflow-hidden">
-          <div className="p-4 lg:p-6 shrink-0 border-t lg:border-t-0 border-b border-[#1f1f1f] flex items-center justify-between min-h-[64px]">
+          <div className="p-4 shrink-0 border-t lg:border-t-0 border-b border-[#1f1f1f] flex items-center justify-between min-h-[64px]">
             <h2 className="text-lg font-semibold text-white">Explanation</h2>
             {aiResponse && (
               <div className="flex items-center gap-4">
@@ -171,14 +171,14 @@ export const Explainer = () => {
             )}
           </div>
           
-          <div className="p-4 lg:p-6 lg:flex-1 lg:overflow-y-auto">
+          <div className="p-4 lg:flex-1 lg:overflow-y-auto">
             {sending ? (
               <div className="flex flex-col items-center justify-center text-gray-500 gap-4 py-16">
                 <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-[#2563eb]"></div>
                 <p>Generating explanation...</p>
               </div>
             ) : !aiResponse ? (
-              <div className="flex flex-col items-center justify-center text-gray-600 text-sm border-2 border-dashed border-[#1f1f1f] rounded-2xl p-8 min-h-[160px]">
+              <div className="flex flex-col items-center justify-center text-gray-600 text-sm border-2 border-dashed border-[#1f1f1f] rounded-2xl p-6 min-h-[160px]">
                 Explanation will appear here...
               </div>
             ) : (

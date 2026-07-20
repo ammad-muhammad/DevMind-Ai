@@ -185,7 +185,7 @@ export const Chat = () => {
               return (
                 <div key={index} className={`animate-fadeInUp flex flex-col ${isUser ? 'items-end' : 'items-start'}`}>
                   <div 
-                    className={`max-w-[85%] rounded-2xl p-4 sm:p-5 shadow-sm ${
+                    className={`max-w-[85%] rounded-2xl p-3 shadow-sm ${
                       isUser 
                         ? 'bg-[#7c3aed] text-white rounded-br-sm' 
                         : 'bg-[#111111] text-gray-200 border border-[#1f1f1f] rounded-bl-sm'
@@ -250,14 +250,14 @@ export const Chat = () => {
                   onChange={(e) => setMessage(e.target.value)}
                   onKeyDown={handleKeyDown}
                   placeholder="Message DevMind AI... (Shift+Enter for new line)"
-                  className="w-full bg-transparent text-white placeholder-gray-500 resize-none outline-none max-h-[200px] text-[15px] py-2 px-1"
+                  className="w-full bg-transparent text-white placeholder-gray-500 resize-none outline-none max-h-[200px] text-sm py-2 px-1"
                   rows={1}
                   disabled={sending}
                 />
                 <button
                   type="submit"
                   disabled={!message.trim() || sending}
-                  className="shrink-0 mb-1 bg-[#7c3aed] hover:bg-[#6d28d9] disabled:bg-[#1a1a1a] disabled:text-gray-600 text-white p-2.5 rounded-xl transition-colors flex items-center justify-center shadow-lg shadow-[#7c3aed]/20 disabled:shadow-none glow-purple"
+                  className="shrink-0 mb-1 bg-[#7c3aed] hover:bg-[#6d28d9] disabled:bg-[#1a1a1a] disabled:text-gray-600 text-white p-2 rounded-xl transition-colors flex items-center justify-center shadow-lg shadow-[#7c3aed]/20 disabled:shadow-none glow-purple"
                 >
                   <Send size={18} />
                 </button>

@@ -117,18 +117,18 @@ export const Settings = () => {
         </h2>
       </div>
 
-      <div className="max-w-4xl mx-auto w-full p-6 flex flex-col gap-8 pb-20">
+      <div className="max-w-4xl mx-auto w-full p-4 md:p-6 flex flex-col gap-6 pb-20">
         <div>
-          <h1 className="text-3xl font-bold text-white mb-2">Account Settings</h1>
+          <h1 className="text-2xl font-bold text-white mb-2">Account Settings</h1>
           <p className="text-gray-400">Manage your profile, preferences, and security.</p>
         </div>
 
         {/* Profile Section */}
-        <div className="border border-gray-800 rounded-xl p-6 bg-[#111111] animate-fadeInUp">
+        <div className="border border-gray-800 rounded-xl p-4 md:p-5 bg-[#111111] animate-fadeInUp">
           <h3 className="text-gray-400 text-xs uppercase tracking-wider mb-6 font-semibold">Profile</h3>
           <div className="flex flex-col md:flex-row gap-8 items-start">
             <div className="flex flex-col items-center gap-4 shrink-0">
-              <div className={`w-24 h-24 rounded-full bg-gradient-to-br ${selectedColorClass} flex items-center justify-center text-white font-bold text-4xl shadow-inner`}>
+              <div className={`w-20 h-20 rounded-full bg-gradient-to-br ${selectedColorClass} flex items-center justify-center text-white font-bold text-3xl shadow-inner`}>
                 {user?.username?.charAt(0).toUpperCase() || 'U'}
               </div>
               <div className="flex gap-2">
@@ -167,7 +167,7 @@ export const Settings = () => {
         </div>
 
         {/* Preferences Section */}
-        <div className="border border-gray-800 rounded-xl p-6 bg-[#111111] animate-fadeInUp delay-100">
+        <div className="border border-gray-800 rounded-xl p-4 md:p-5 bg-[#111111] animate-fadeInUp delay-100">
           <h3 className="text-gray-400 text-xs uppercase tracking-wider mb-6 font-semibold">Preferences</h3>
           <div className="flex flex-col gap-6">
             <div className="w-full md:w-1/2">
@@ -246,7 +246,7 @@ export const Settings = () => {
         </div>
 
         {/* Change Password Section */}
-        <div className="border border-gray-800 rounded-xl p-6 bg-[#111111] animate-fadeInUp delay-200">
+        <div className="border border-gray-800 rounded-xl p-4 md:p-5 bg-[#111111] animate-fadeInUp delay-200">
           <h3 className="text-gray-400 text-xs uppercase tracking-wider mb-6 font-semibold">Change Password</h3>
           <div className="flex flex-col gap-4 max-w-md">
             <div>
@@ -294,7 +294,7 @@ export const Settings = () => {
         </div>
 
         {/* Danger Zone Section */}
-        <div className="border border-red-900/30 bg-red-950/10 rounded-xl p-6 animate-fadeInUp delay-300">
+        <div className="border border-red-900/30 bg-red-950/10 rounded-xl p-4 md:p-5 animate-fadeInUp delay-300">
           <h3 className="text-red-400 text-xs uppercase tracking-wider mb-6 font-semibold">Danger Zone</h3>
           <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center justify-between">
             <div>
@@ -316,7 +316,7 @@ export const Settings = () => {
       {showDeleteModal && (
         <div className="fixed inset-0 bg-black/80 z-50 flex items-center justify-center backdrop-blur-sm p-4">
           <div className="bg-[#111111] border border-red-900/50 rounded-2xl w-full max-w-md overflow-hidden shadow-2xl">
-            <div className="p-6 flex flex-col items-center text-center gap-4">
+            <div className="p-5 md:p-6 flex flex-col items-center text-center gap-4">
               <div className="w-16 h-16 rounded-full bg-red-500/10 flex items-center justify-center text-red-500 mb-2">
                 <AlertTriangle size={32} />
               </div>

@@ -89,7 +89,7 @@ export const CodeWriter = () => {
         </h2>
       </div>
 
-      <div className="max-w-5xl mx-auto w-full p-6 flex flex-col gap-8">
+      <div className="max-w-5xl mx-auto w-full p-4 md:p-6 flex flex-col gap-6">
         
         {/* Input Section */}
         <div className="flex flex-col gap-4">
@@ -98,14 +98,14 @@ export const CodeWriter = () => {
             <p className="text-gray-400">Describe what you want to build, and AI will generate production-ready code.</p>
           </div>
           
-          <div className="bg-[#111111] border border-[#1f1f1f] rounded-2xl p-6 shadow-sm focus-within:border-[#16a34a]/50 focus-within:ring-1 focus-within:ring-[#16a34a]/50 transition-all">
+          <div className="bg-[#111111] border border-[#1f1f1f] rounded-2xl p-4 md:p-5 shadow-sm focus-within:border-[#16a34a]/50 focus-within:ring-1 focus-within:ring-[#16a34a]/50 transition-all">
 
 
             <textarea
               value={prompt}
               onChange={(e) => setPrompt(e.target.value)}
               placeholder="Example: Write a function that takes an array of objects and sorts them by a given key..."
-              className="w-full bg-transparent text-white placeholder-gray-600 resize-none outline-none min-h-[120px] text-[15px]"
+              className="w-full bg-transparent text-white placeholder-gray-600 resize-none outline-none min-h-[100px] text-sm"
             />
             
             {error && (
@@ -165,7 +165,7 @@ export const CodeWriter = () => {
               )}
             </div>
             
-            <div className="bg-[#111111] border border-[#1f1f1f] rounded-2xl p-6 min-h-[200px]">
+            <div className="bg-[#111111] border border-[#1f1f1f] rounded-2xl p-4 md:p-5 min-h-[200px]">
               {sending ? (
                 <div className="h-full flex flex-col items-center justify-center text-gray-500 gap-4 py-12">
                   <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-[#16a34a]"></div>

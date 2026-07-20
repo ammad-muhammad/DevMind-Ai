@@ -32,7 +32,7 @@ export const Snippets = () => {
         </h2>
       </div>
 
-      <div className="max-w-5xl mx-auto w-full p-6">
+      <div className="max-w-5xl mx-auto w-full p-4 md:p-6">
         {loading && snippets.length === 0 ? (
           <div className="flex justify-center py-20">
             <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500"></div>
@@ -50,7 +50,7 @@ export const Snippets = () => {
             {snippets.map((snippet, index) => {
               const delayClass = index === 0 ? '' : 'delay-' + (Math.min(index, 3) * 100);
               return (
-              <div key={snippet._id} className={`bg-[#111111] border border-[#1f1f1f] rounded-2xl p-5 hover:border-[#333] transition-colors flex flex-col group animate-fadeInUp card-hover ${delayClass}`}>
+              <div key={snippet._id} className={`bg-[#111111] border border-[#1f1f1f] rounded-2xl p-4 hover:border-[#333] transition-colors flex flex-col group animate-fadeInUp card-hover ${delayClass}`}>
                 <div className="flex items-start justify-between mb-4 gap-4">
                   <div className="flex-1 min-w-0">
                     <h3 className="text-lg font-semibold text-white truncate mb-1">{snippet.title}</h3>

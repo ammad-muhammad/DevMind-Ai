@@ -44,7 +44,7 @@ export const Login = () => {
           <div className="flex justify-center text-[#8b5cf6] hover:scale-110 transition-transform duration-300">
             <Code2 size={48} />
           </div>
-          <h2 className="mt-6 text-center text-3xl font-extrabold text-white">
+          <h2 className="mt-6 text-center text-2xl font-extrabold text-white">
             DevMind AI
           </h2>
           <p className="mt-2 text-center text-sm text-gray-400">
@@ -53,7 +53,7 @@ export const Login = () => {
         </div>
 
         <div className="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
-          <div className="bg-[#111111]/80 backdrop-blur-xl py-8 px-4 shadow-2xl shadow-[#8b5cf6]/5 sm:rounded-2xl sm:px-10 border border-gray-800 transition-all duration-300 hover:border-[#8b5cf6]/30 hover:shadow-[0_0_30px_rgba(124,58,237,0.1)]">
+          <div className="bg-[#111111]/80 backdrop-blur-xl p-6 shadow-2xl shadow-[#8b5cf6]/5 sm:rounded-2xl border border-gray-800 transition-all duration-300 hover:border-[#8b5cf6]/30 hover:shadow-[0_0_30px_rgba(124,58,237,0.1)]">
             <form className="space-y-6" onSubmit={handleSubmit}>
               {error && (
                 <div className="bg-red-900/50 border border-red-500 text-red-200 px-4 py-3 rounded-md text-sm animate-fade-in">
@@ -71,7 +71,7 @@ export const Login = () => {
                     required
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    className="appearance-none block w-full px-3 py-2 border border-gray-700 rounded-md shadow-sm placeholder-gray-500 focus:outline-none focus:ring-[#8b5cf6] focus:border-[#8b5cf6] bg-[#1a1a1a] text-white sm:text-sm transition-all duration-300 focus:shadow-[0_0_15px_rgba(124,58,237,0.2)]"
+                    className="appearance-none block w-full px-4 py-2.5 border border-gray-700 rounded-md shadow-sm placeholder-gray-500 focus:outline-none focus:ring-[#8b5cf6] focus:border-[#8b5cf6] bg-[#1a1a1a] text-white sm:text-sm transition-all duration-300 focus:shadow-[0_0_15px_rgba(124,58,237,0.2)]"
                     placeholder="you@example.com"
                   />
                 </div>
@@ -89,7 +89,7 @@ export const Login = () => {
                     onChange={(e) => setPassword(e.target.value)}
                     placeholder="••••••••"
                     className="w-full bg-gray-900 border border-gray-700 
-                    rounded-xl px-4 py-3 text-white pr-12
+                    rounded-xl px-4 py-2.5 text-white pr-12
                     focus:border-purple-500 focus:outline-none"
                   />
                   <button
@@ -124,7 +124,7 @@ export const Login = () => {
                 <button
                   type="submit"
                   disabled={loading}
-                  className="w-full flex justify-center py-2.5 px-4 border border-transparent rounded-md shadow-sm text-sm font-bold text-white bg-[#8b5cf6] hover:bg-[#7c3aed] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#8b5cf6] disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300 hover:shadow-[0_0_20px_rgba(124,58,237,0.4)]"
+                  className="w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-sm font-bold text-white bg-[#8b5cf6] hover:bg-[#7c3aed] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#8b5cf6] disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300 hover:shadow-[0_0_20px_rgba(124,58,237,0.4)]"
                 >
                   {loading ? <Loader2 className="animate-spin" size={20} /> : 'Sign in'}
                 </button>

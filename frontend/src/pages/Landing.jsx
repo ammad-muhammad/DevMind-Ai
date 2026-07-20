@@ -63,7 +63,7 @@ export const Landing = () => {
             🚀 AI-Powered Developer Tool
           </div>
           
-          <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight mb-6 leading-tight transition-transform duration-700 hover:scale-[1.02]">
+          <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight mb-6 leading-tight transition-transform duration-700 hover:scale-[1.02]">
             Your Intelligent <br className="hidden md:block" />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#a78bfa] via-[#7c3aed] to-[#5b21b6]">
               Coding Partner
@@ -76,10 +76,10 @@ export const Landing = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row items-center gap-4 mb-6 transition-all duration-700 delay-200">
-            <Link to="/login" className="glow-purple w-full sm:w-auto text-base font-semibold bg-[#7c3aed] hover:bg-[#6d28d9] text-white px-8 py-4 rounded-xl transition-all duration-300 shadow-[0_0_20px_rgba(124,58,237,0.4)] hover:shadow-[0_0_30px_rgba(124,58,237,0.6)] hover:-translate-y-1">
+            <Link to="/login" className="glow-purple w-full sm:w-auto text-base font-semibold bg-[#7c3aed] hover:bg-[#6d28d9] text-white px-6 py-3 rounded-xl transition-all duration-300 shadow-[0_0_20px_rgba(124,58,237,0.4)] hover:shadow-[0_0_30px_rgba(124,58,237,0.6)] hover:-translate-y-1">
               Start Coding Free →
             </Link>
-            <button onClick={() => scrollTo('how-it-works')} className="w-full sm:w-auto text-base font-medium text-white border border-white/20 hover:border-white/40 hover:bg-white/5 px-8 py-4 rounded-xl transition-all duration-300">
+            <button onClick={() => scrollTo('how-it-works')} className="w-full sm:w-auto text-base font-medium text-white border border-white/20 hover:border-white/40 hover:bg-white/5 px-6 py-3 rounded-xl transition-all duration-300">
               See How It Works
             </button>
           </div>
@@ -139,7 +139,7 @@ export const Landing = () => {
       </section>
 
       {/* SECTION 4: Features */}
-      <section id="features" className="py-24 px-4 relative">
+      <section id="features" className="py-16 px-4 relative">
         <div className="absolute top-1/2 left-0 w-[500px] h-[500px] bg-[#7c3aed]/10 rounded-full blur-[100px] -z-10"></div>
         
         <div className="max-w-7xl mx-auto">
@@ -202,7 +202,7 @@ export const Landing = () => {
       </section>
 
       {/* SECTION 5: How it works */}
-      <section id="how-it-works" className="py-24 px-4 bg-black/30 transition-colors duration-700 hover:bg-black/50">
+      <section id="how-it-works" className="py-16 px-4 bg-black/30 transition-colors duration-700 hover:bg-black/50">
         <div className="max-w-7xl mx-auto text-center">
           <h2 className="text-3xl md:text-5xl font-bold mb-20 transition-all duration-500 hover:tracking-wide">Start coding smarter in 3 steps</h2>
           
@@ -241,12 +241,12 @@ export const Landing = () => {
       </section>
 
       {/* SECTION 6: CTA */}
-      <section className="scroll-animate py-24 px-4 relative overflow-hidden group">
+      <section className="scroll-animate py-16 px-4 relative overflow-hidden group">
         <div className="absolute inset-0 bg-gradient-to-br from-[#4c1d95] via-[#2e1065] to-black opacity-80 -z-10 transition-opacity duration-700 group-hover:opacity-100"></div>
         <div className="max-w-4xl mx-auto text-center animate-fade-in">
           <h2 className="text-4xl md:text-6xl font-bold text-white mb-6 transition-transform duration-500 group-hover:scale-105">Ready to code smarter?</h2>
           <p className="text-xl text-[#c4b5fd] mb-10 max-w-2xl mx-auto">Join thousands of developers already using DevMind AI</p>
-          <Link to="/login" className="inline-block text-lg font-bold bg-white text-[#7c3aed] hover:bg-gray-100 px-10 py-5 rounded-full transition-all duration-300 shadow-[0_0_30px_rgba(255,255,255,0.3)] hover:scale-110">
+          <Link to="/login" className="inline-block text-lg font-bold bg-white text-[#7c3aed] hover:bg-gray-100 px-8 py-4 rounded-full transition-all duration-300 shadow-[0_0_30px_rgba(255,255,255,0.3)] hover:scale-110">
             Get Started For Free →
           </Link>
         </div>

@@ -96,7 +96,7 @@ export const Sidebar = () => {
                   key={item.path}
                   to={item.path}
                   onClick={handleItemClick}
-                  className={`group flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium transition-all duration-200 border-l-2 animate-slideInLeft ${delayClass}
+                  className={`group flex items-center gap-3 px-3 py-2 rounded-xl text-sm font-medium transition-all duration-200 border-l-2 animate-slideInLeft ${delayClass}
                     ${isActive 
                       ? `${item.activeBg} text-white ${item.activeBorder} glow-purple` 
                       : 'border-transparent text-gray-400 hover:text-white hover:bg-[#111111]'
@@ -177,7 +177,7 @@ export const Sidebar = () => {
             <Link 
               to="/dashboard/snippets"
               onClick={handleItemClick}
-              className={`flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium border-l-2 transition-all duration-200 animate-slideInLeft delay-300
+              className={`flex items-center gap-3 px-3 py-2 rounded-xl text-sm font-medium border-l-2 transition-all duration-200 animate-slideInLeft delay-300
                 ${location.pathname === '/dashboard/snippets' 
                   ? 'bg-[#3b82f6]/10 text-white border-[#3b82f6] glow-purple' 
                   : 'border-transparent text-gray-400 hover:text-white hover:bg-[#111111]'
