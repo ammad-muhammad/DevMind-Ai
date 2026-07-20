@@ -10,7 +10,7 @@
 > debug, write, and review code — built for developers 
 > who want to code smarter and ship faster.
 
-🌐 **Live Demo:** [devmind-ai.vercel.app](https://devmind-ai.vercel.app)
+🌐 **Live Demo:** [devmind-ai.vercel.app](https://dev-mind-g46052c1l-muhammad-ammads-projects.vercel.app/)
 
 ---
 
@@ -42,7 +42,6 @@ written code, all within a clean developer-focused interface.
   with live preview.
 
 ### 👤 User System
-- Secure registration with OTP email verification
 - JWT-based authentication (24-hour sessions)
 - Password change and account deletion from settings
 
@@ -78,7 +77,6 @@ written code, all within a clean developer-focused interface.
 | Node.js + Express | REST API Server |
 | MongoDB + Mongoose | Database |
 | JWT + bcrypt | Authentication |
-| Nodemailer + Gmail | Email OTP |
 | Helmet + Rate Limiting | Security |
 
 ### AI & Deployment
@@ -105,7 +103,6 @@ devmind-ai/
 │   │   │   ├── Landing.jsx
 │   │   │   ├── Login.jsx
 │   │   │   ├── Register.jsx
-│   │   │   ├── VerifyOTP.jsx
 │   │   │   ├── Privacy.jsx
 │   │   │   ├── Terms.jsx
 │   │   │   └── dashboard/
@@ -230,8 +227,7 @@ automatically ensuring maximum reliability.
 ## 👨‍💻 Author
 
 **Muhammad Ammad**
-- Portfolio: [your-portfolio-link]
-- LinkedIn: [your-linkedin]
+- LinkedIn: [your-linkedin](https://www.linkedin.com/in/ammadm/)
 - GitHub: [@ammad-muhammad](https://github.com/ammad-muhammad)
 
 ---
