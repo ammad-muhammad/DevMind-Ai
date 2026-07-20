@@ -53,11 +53,71 @@ export const Landing = () => {
       <Navbar />
 
       {/* SECTION 2: Hero */}
-      <section className="relative min-h-screen flex items-center justify-center pt-20 pb-16 px-4">
-        {/* Background glow effects */}
-        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-[#7c3aed]/20 rounded-full blur-[120px] -z-10 animate-pulse" style={{ animationDuration: '4s' }}></div>
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         
-        <div className="max-w-7xl mx-auto flex flex-col items-center text-center animate-fade-in opacity-0" style={{ animationFillMode: 'forwards' }}>
+        {/* Gradient Orbs */}
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="animate-orb absolute top-1/4 left-1/4 w-96 h-96 rounded-full opacity-20"
+          style={{
+            background: 'radial-gradient(circle, #7c3aed, transparent)',
+            animationDuration: '8s'
+          }} />
+          <div className="animate-orb absolute bottom-1/4 right-1/4 w-80 h-80 rounded-full opacity-15"
+          style={{
+            background: 'radial-gradient(circle, #3b82f6, transparent)',
+            animationDuration: '12s',
+            animationDelay: '-4s'
+          }} />
+          <div className="animate-orb absolute top-1/2 right-1/3 w-64 h-64 rounded-full opacity-10"
+          style={{
+            background: 'radial-gradient(circle, #a78bfa, transparent)',
+            animationDuration: '10s',
+            animationDelay: '-2s'
+          }} />
+        </div>
+
+        {/* Floating Code Words */}
+        <div className="absolute inset-0 pointer-events-none overflow-hidden">
+          {[
+            { text: 'const', x: '10%', y: '20%', delay: '0s', duration: '6s' },
+            { text: '=>', x: '80%', y: '15%', delay: '1s', duration: '8s' },
+            { text: '<div>', x: '15%', y: '70%', delay: '2s', duration: '7s' },
+            { text: 'function()', x: '75%', y: '65%', delay: '0.5s', duration: '9s' },
+            { text: '{}', x: '45%', y: '10%', delay: '3s', duration: '6s' },
+            { text: 'async', x: '85%', y: '40%', delay: '1.5s', duration: '8s' },
+            { text: 'return', x: '5%', y: '45%', delay: '2.5s', duration: '7s' },
+            { text: '</>', x: '60%', y: '80%', delay: '0s', duration: '10s' },
+            { text: 'import', x: '30%', y: '85%', delay: '3.5s', duration: '8s' },
+            { text: '[]', x: '90%', y: '75%', delay: '1s', duration: '6s' },
+            { text: 'useState', x: '20%', y: '35%', delay: '4s', duration: '9s' },
+            { text: '.map()', x: '65%', y: '25%', delay: '2s', duration: '7s' },
+          ].map((item, i) => (
+            <span
+              key={i}
+              className="absolute text-purple-400 font-mono text-sm font-medium animate-float select-none"
+              style={{
+                left: item.x,
+                top: item.y,
+                animationDuration: item.duration,
+                animationDelay: item.delay,
+                opacity: 0.25,
+                textShadow: '0 0 10px rgba(124, 58, 237, 0.5)'
+              }}
+            >
+              {item.text}
+            </span>
+          ))}
+        </div>
+
+        {/* Subtle grid overlay */}
+        <div className="absolute inset-0 pointer-events-none"
+        style={{
+          backgroundImage: `linear-gradient(rgba(124,58,237,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(124,58,237,0.03) 1px, transparent 1px)`,
+          backgroundSize: '50px 50px'
+        }} />
+
+        {/* Hero Content */}
+        <div className="relative z-10 text-center px-4 max-w-4xl mx-auto flex flex-col items-center pt-20 pb-16 animate-fade-in opacity-0" style={{ animationFillMode: 'forwards' }}>
           
           <div className="mb-6 inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[#7c3aed]/30 bg-[#7c3aed]/10 text-[#a78bfa] text-sm font-medium backdrop-blur-sm transition-transform duration-500 hover:scale-105">
             🚀 AI-Powered Developer Tool
