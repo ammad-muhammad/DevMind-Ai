@@ -84,7 +84,7 @@ export const Landing = () => {
             </button>
           </div>
           
-          <p className="text-sm text-gray-500 mb-16 transition-all duration-700 delay-300">
+          <p className="text-sm text-gray-500 mb-8 transition-all duration-700 delay-300">
             No credit card required • Free forever
           </p>
           
